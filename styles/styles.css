@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    /* <weight>: Use a value from 100 to 900 */
+    /* <uniquifier>: Use a unique and descriptive class name */
+    /* lui il met que font-family: 'Inter', sans-serif;*/
+    /*.inter-<uniquifier> {*/
+    font-family: "Inter", sans-serif;
+    /*
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    }*/
+}
+
+.slider{
+    width:100%;
+    height:80vh;
+    aspect-ratio:16/9;
+    background-color: rgb(80,6,6);
+    position:relative;
+}
+
+.slider-background{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    filter:brightness(80%);
+}
+
+.slider-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+}
+
+h1{
+    color:rgb(255, 232, 194);
+    font-size:5rem;
+    font-family:"Rammetto One", sans-serif;
+}
+
+h2{
+    font-size:2rem;
+    font-family:"Rammetto One", sans-serif;
+    margin-bottom:100px ;
+}
+
+p{
+    font-size:1.5rem;
+    line-height:1.5em;
+}
+
+.slider-content p{
+    color:rgb(255, 232, 194);
+    font-size:1.5rem;
+    font-weight:400;
+}
+
+.section{
+    padding:100px 50px;
+    background-color: rgb(255, 232, 194);
+    color:rgb(80 6 6);
+}
+
+.boxed{
+    max-width:1280px;
+    margin-inline:auto;
+}
+
+.flex{
+    display:flex;
+}
+
+.red{
+    /*background:rgb(80, 6, 6);*/
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url(../img/feuilles_mortes.jpeg);
+    background-size: cover;
+    color:rgb(255, 232, 194);
+}
+
+.w32{
+    width:32%;
+}
+
+.w40{
+    width:40%;
+}
+
+.w50{
+    width:50%;
+}
+
+.w60{
+    width:60%;
+}
+
+.gap20{
+    gap:20px;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.skill{
+    background: rgba(255, 232, 194, 0.59);
+    border-radius:15px;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.skill img{
+    width:100px;
+    height:100px;
+    aspect-ratio:1/1;
+    object-fit:contain;
+}
+
+.skill h3{
+    margin-top:10px;
+}
+
+.realisation{
+    height:auto;
+    aspect-ratio:1/1;
+    position:relative;
+}
+
+.realisation img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(30%);
+}
+
+.realisation a{
+    display:block;
+    width:100%;
+    height:100%;
+    text-decoration:none;
+    color:rgb(255, 232, 194);
+}
+
+.realisation h3{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:2rem;
+    width:max-content;
+    opacity:0;
+    transition:.4s ease;
+}
+
+.realisation:hover img{
+    filter: brightness(50%);
+}
+
+.realisation:hover h3{
+    opacity:1;
+}
+
+.icon{
+    display: block;
+    font-size:60px !important;
+}
+
+.label{
+    display: block;
+    font-weight:700;
+    text-transform:uppercase;
+    margin:10px 0;
+    font-size:2rem;
+}
+
+.value{
+    display: block;
+    font-size:1.5rem;
+}
+
+.lien-neutre{
+    /*text-decoration: none;*/
+    color:inherit;
+}
+
+.contact{
+    background: rgba(255, 232, 194, 0.779);
+    border-radius:15px;
+    border-style:dashed;
+    padding:20px;
+    text-wrap:balance ;
+    box-sizing:border-box;
+    color:rgb(80, 6, 6);
+}
+
+.email{
+    word-break:break-word;
+    overflow-wrap:break-word;
+}
+
+.aligncenter{
+    align-items: center;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgb(255, 232, 194);
+    z-index:999;
+    padding:10px 0;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.2);
+}
+
+.header-logo{
+    display:block;
+}
+
+.header-logo img{
+    width:70px;
+}
+
+.header-menu{
+    display:flex;
+    align-items: center ;
+    list-style:none;
+}
+
+.header-menu li a{
+    text-decoration: none;
+    color:rgb(80, 6, 6);
+    padding:10px 20px;
+    display:block;
+    box-sizing:border-box;
+    transition:.1s ease;
+}
+
+.header-menu li a:hover{
+    background-color:rgb(80, 6, 6);
+    color:rgb(255, 232, 194);
+    border-radius:15px;
+}
+
+.header-menu li:last-child a{
+    background-color: rgba(80, 6, 6);
+    color:rgb(255, 232, 194);
+    border-radius:15px;
+}
+
+.header-menu-mobile{
+    display:none;
+}
+
+/*s'applique lorsque la taille de l'écran est inférieur à 810px*/
+@media(max-width:810px){
+    header{
+       height:60px !important; 
+    }
+
+    .header-menu-mobile{
+        display:block;
+        border:0px;
+        background-color: rgb(255, 232, 194);
+        color:rgb(80, 6, 6);
+        position:absolute;
+        left:5%;
+        top:50%;
+        transform: translateY(-50%);
+        z-index:991;
+    }
+
+
+    .header-logo{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        z-index: 991;
+    }
+
+    .header-menu{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100vh;
+        background-color: rgb(255, 232, 194);
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+        gap:30px;
+        display:none;
+
+    }
+
+    .header-menu li:last-child a{
+        margin-top: 10px;
+    }
+
+    .active{
+        display:flex;
+    }
+
+    .slider{
+        height: 60vh;;
+    }
+
+    .slider-content{
+        width:90%;
+    }
+
+    .slider-content p{
+        margin-top:20px;
+        font-size:1.3rem;
+        text-wrap: balance;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.7rem;
+        margin-bottom: 30px;
+    }
+
+    p{
+        font-size:1rem;
+        text-wrap:balance;
+    }
+
+    .toColumn{
+        flex-direction:column;
+    }
+
+    .mCenter{
+        justify-content:center;
+        align-items: center;
+        text-align:center;
+    }
+
+    /*width mobile 90*/
+    .wm90{
+        width:90%;
+    }
+
+    .wm70{
+        width: 70%;
+    }
+
+    .wm50{
+        width:50%;
+    }
+
+    .section{
+        padding:50px 0;
+    }
+
+    .boxed{
+        max-width:90%;
+    }
+
+}
